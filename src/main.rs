@@ -73,7 +73,7 @@ fn load_config() -> AppResult<Config> {
             .to_owned(),
         redis_token: required_env("UPSTASH_REDIS_REST_TOKEN")?,
         poll_interval: Duration::from_secs(positive_u64(
-            "POLL_INTERVAL_SECS", 30,
+            "POLL_INTERVAL_SECS", 60,
         )?),
         fetch_timeout: Duration::from_secs(positive_u64(
             "FETCH_TIMEOUT_SECS", 8,
